@@ -4,4 +4,5 @@
 #include <stdlib.h>
 
 void pwd_command();
+void clear_command();
 void execute_commands(char *command);
