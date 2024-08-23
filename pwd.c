@@ -2,11 +2,15 @@
 #include <unistd.h>
 #include "commands.h"
 
-void pwd_command() {
+void pwd_command()
+{
     char cwd[1024];
-    if (getcwd(cwd, sizeof(cwd)) != NULL) {
+    if (getcwd(cwd, sizeof(cwd)) != NULL)
+    {
         printf("%s\n", cwd);
-    } else {
+    }
+    else
+    {
         perror("getcwd() error");
     }
 }
