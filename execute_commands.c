@@ -10,6 +10,10 @@ void execute_commands(char *command)
     {
         clear_command();
     }
+    else if (strcmp(command, "ls") == 0)
+    {
+        ls_command();
+    }
     else
     {
         printf("Command not recognized.\n");

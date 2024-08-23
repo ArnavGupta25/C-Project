@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <unistd.h>
 #include "commands.h"
 
 void pwd_command()
