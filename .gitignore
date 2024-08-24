@@ -1,3 +1,4 @@
 .vscode/settings.json
 run.exe
 run
+.vscode/c_cpp_properties.json
