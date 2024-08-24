@@ -29,11 +29,14 @@ The project is organized as follows:
 │   ├── main.c                    # Main entry point of the program
 │   ├── execute_commands.c        # Contains the command execution logic
 │   └── commands/                 # Directory containing individual command implementations
-│       ├── pwd.c
+│       ├── cd.c
 │       ├── clear.c
 │       ├── ls.c
 │       ├── mkdir.c
+│       └── pwd.c
+│       └── rm.c
 │       └── rmdir.c
+│       └── touch.c
 ├── include/
 │   └── commands.h                # Header file with command declarations
 ├── scripts/
@@ -49,6 +52,11 @@ The project is organized as follows:
 - **`mkdir`**: Creates a new directory.
 - **`rmdir`**: Removes an empty directory.
 - **`clear`**: Clears the terminal.
+- **`cd`**: Changes the current working directory.
+- **`rm`**: Removes a file or directory.
+- **`touch`**: Creates a new empty file.
+
+
 
 
 ## Getting Started

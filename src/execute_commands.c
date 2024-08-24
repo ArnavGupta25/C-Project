@@ -29,6 +29,14 @@ void execute_commands(char *command)
     {
         cd_command(arg);
     }
+    else if (strcmp(cmd, "rm") == 0)
+    {
+        rm_command(arg);
+    }
+    else if (strcmp(cmd, "touch") == 0)
+    {
+        touch_command(arg);
+    }
     else
     {
         printf("Command not recognized.\n");

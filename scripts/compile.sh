@@ -7,6 +7,8 @@ gcc -o run \
 ../src/commands/mkdir.c \
 ../src/commands/rmdir.c \
 ../src/commands/cd.c \
+../src/commands/rm.c \
+../src/commands/touch.c \
 -I ../include \
 -Wall
 

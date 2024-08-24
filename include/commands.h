@@ -5,6 +5,7 @@
 #include <dirent.h>
 #include <sys/stat.h>
 #include <sys/types.h>
+#include <fcntl.h>
 
 void pwd_command();
 void clear_command();
@@ -12,4 +13,6 @@ void ls_command();
 void mkdir_command(char *dir_name);
 void rmdir_command(char *dir_name);
 void cd_command(const char *path);
+void rm_command(const char *filename);
+void touch_command(const char *filename);
 void execute_commands(char *command);
