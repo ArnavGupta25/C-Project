@@ -10,12 +10,6 @@
 - [Usage](#Usage)
 - [Contributing](#contributing)
 
-
-
-
-
-
-
 ## Overview
 
 This project is a reimplementation of various common shell commands in C, specifically for Linux environments. It aims to provide a deeper understanding of how these commands work by coding them from scratch using standard C libraries. Each command is designed to closely mimic its Unix shell counterpart.
@@ -55,10 +49,7 @@ The project is organized as follows:
 - **`clear`**: Clears the terminal.
 - **`cd`**: Changes the current working directory.
 - **`rm`**: Removes a file or directory.
-- **`touch`**: Creates a new empty file.
-
-
-
+- **`touch`**: Creates a new empty file or updates the timestamp of an existing file.
 
 ## Getting Started
 
@@ -75,13 +66,13 @@ To get a copy of this project up and running on your local machine, follow these
 1. Clone the repository:
 
     ```sh
-    git clone https://github.com/your-username/your-repository-name.git
+    git clone https://github.com/ArnavGupta25/Unix-Commands-in-C.git
     ```
 
 2. Navigate into the project directory:
 
     ```sh
-    cd your-repository-name
+    cd Unix-Commands-in-C
     ```
 
 ## Running the Project
@@ -109,5 +100,3 @@ Once the program is running, you can enter any of the implemented commands, such
 ## Contributing
 
 Contributions are welcome! If you find any issues or have suggestions for additional commands to implement, feel free to open an issue or submit a pull request.
-
-
