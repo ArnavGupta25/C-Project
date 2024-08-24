@@ -4,6 +4,7 @@
 ## Table of Contents
 
 - [Overview](#overview)
+- [File Structure](#file-structure)
 - [Commands Implemented](#commands-implemented)
 - [Running the Project](#running-the-project)
 - [Usage](#Usage)
@@ -18,6 +19,28 @@
 ## Overview
 
 This project is a reimplementation of various common shell commands in C, specifically for Linux environments. It aims to provide a deeper understanding of how these commands work by coding them from scratch using standard C libraries. Each command is designed to closely mimic its Unix shell counterpart.
+
+## File Structure
+
+The project is organized as follows:
+
+/your_project_directory
+├── src/
+│   ├── main.c                    # Main entry point of the program
+│   ├── execute_commands.c        # Contains the command execution logic
+│   └── commands/                 # Directory containing individual command implementations
+│       ├── pwd.c
+│       ├── clear.c
+│       ├── ls.c
+│       ├── mkdir.c
+│       └── rmdir.c
+├── include/
+│   └── commands.h                # Header file with command declarations
+├── scripts/
+│   └── compile.sh                # Script to compile the project
+├── .gitignore                    # Specifies files and directories to be ignored by Git
+└── README.md                     # This README file
+
 
 ## Commands Implemented
 

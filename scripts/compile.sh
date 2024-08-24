@@ -6,6 +6,7 @@ gcc -o run \
 ../src/commands/ls.c \
 ../src/commands/mkdir.c \
 ../src/commands/rmdir.c \
+../src/commands/cd.c \
 -I ../include \
 -Wall
 

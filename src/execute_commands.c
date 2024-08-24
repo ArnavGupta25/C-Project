@@ -5,15 +5,15 @@ void execute_commands(char *command)
     char *cmd = strtok(command, " ");
     char *arg = strtok(NULL, " ");
 
-    if (strcmp(command, "pwd") == 0)
+    if (strcmp(cmd, "pwd") == 0)
     {
         pwd_command();
     }
-    else if (strcmp(command, "clear") == 0)
+    else if (strcmp(cmd, "clear") == 0)
     {
         clear_command();
     }
-    else if (strcmp(command, "ls") == 0)
+    else if (strcmp(cmd, "ls") == 0)
     {
         ls_command();
     }
@@ -24,6 +24,10 @@ void execute_commands(char *command)
     else if (strcmp(cmd, "rmdir") == 0)
     {
         rmdir_command(arg);
+    }
+    else if (strcmp(cmd, "cd") == 0)
+    {
+        cd_command(arg);
     }
     else
     {
