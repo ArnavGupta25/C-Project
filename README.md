@@ -24,6 +24,7 @@ This project is a reimplementation of various common shell commands in C, specif
 
 The project is organized as follows:
 
+```
 /your_project_directory
 ├── src/
 │   ├── main.c                    # Main entry point of the program
@@ -43,7 +44,7 @@ The project is organized as follows:
 │   └── compile.sh                # Script to compile the project
 ├── .gitignore                    # Specifies files and directories to be ignored by Git
 └── README.md                     # This README file
-
+```
 
 ## Commands Implemented
 
