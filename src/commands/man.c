@@ -4,51 +4,55 @@ void man_command(const char *command)
 {
     if (command == NULL || strcmp(command, "") == 0)
     {
-        printf("Usage: man [command]\n");
+        // Print the list of available commands
         printf("Available commands:\n");
-        printf("  pwd    - Print the current working directory.\n");
-        printf("  clear  - Clear the terminal screen.\n");
-        printf("  ls     - List files and directories in the current directory.\n");
-        printf("  mkdir  - Create a new directory.\n");
-        printf("  rmdir  - Remove an empty directory.\n");
-        printf("  cd     - Change the current directory.\n");
-        printf("  rm     - Remove a file.\n");
-        printf("  touch  - Create a new file or update the timestamp of an existing file.\n");
-        printf("  man    - Display the manual page for a command.\n");
-        return;
+        printf("  pwd    - Prints the current working directory\n");
+        printf("  ls     - Lists the files and directories in the current directory\n");
+        printf("  mkdir  - Creates a new directory\n");
+        printf("  rmdir  - Removes an empty directory\n");
+        printf("  cd     - Changes the current directory\n");
+        printf("  rm     - Removes a file\n");
+        printf("  touch  - Creates a new file or updates the timestamp of an existing file\n");
+        printf("  man    - Displays help information for commands\n");
     }
-
-    if (strcmp(command, "pwd") == 0)
+    else if (strcmp(command, "pwd") == 0)
     {
-        printf("pwd - Print the current working directory.\n");
-    }
-    else if (strcmp(command, "clear") == 0)
-    {
-        printf("clear - Clear the terminal screen.\n");
+        printf("pwd: Prints the current working directory.\n");
+        printf("Usage: pwd\n");
     }
     else if (strcmp(command, "ls") == 0)
     {
-        printf("ls - List files and directories in the current directory.\n");
+        printf("ls: Lists the files and directories in the current directory.\n");
+        printf("Usage: ls [OPTION]\n");
+        printf("Options:\n");
+        printf("  -l    List in long format\n");
+        printf("  -a    List all entries including those starting with a dot (hidden files)\n");
+        printf("  -la   List in long format including all entries\n");
     }
     else if (strcmp(command, "mkdir") == 0)
     {
-        printf("mkdir - Create a new directory.\n");
+        printf("mkdir: Creates a new directory.\n");
+        printf("Usage: mkdir DIRECTORY_NAME\n");
     }
     else if (strcmp(command, "rmdir") == 0)
     {
-        printf("rmdir - Remove an empty directory.\n");
+        printf("rmdir: Removes an empty directory.\n");
+        printf("Usage: rmdir DIRECTORY_NAME\n");
     }
     else if (strcmp(command, "cd") == 0)
     {
-        printf("cd - Change the current directory.\n");
+        printf("cd: Changes the current directory.\n");
+        printf("Usage: cd DIRECTORY_NAME\n");
     }
     else if (strcmp(command, "rm") == 0)
     {
-        printf("rm - Remove a file.\n");
+        printf("rm: Removes a file.\n");
+        printf("Usage: rm FILE_NAME\n");
     }
     else if (strcmp(command, "touch") == 0)
     {
-        printf("touch - Create a new file or update the timestamp of an existing file.\n");
+        printf("touch: Creates a new file or updates the timestamp of an existing file.\n");
+        printf("Usage: touch FILE_NAME\n");
     }
     else
     {

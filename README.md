@@ -6,8 +6,13 @@
 - [Overview](#overview)
 - [File Structure](#file-structure)
 - [Commands Implemented](#commands-implemented)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Cloning the Repository](#cloning-the-repository)
 - [Running the Project](#running-the-project)
-- [Usage](#Usage)
+  - [Compilation](#compilation)
+  - [Execution](#execution)
+- [Usage](#usage)
 - [Contributing](#contributing)
 
 ## Overview
@@ -27,6 +32,7 @@ The project is organized as follows:
 │       ├── cd.c
 │       ├── clear.c
 │       ├── ls.c
+│       ├── man.c
 │       ├── mkdir.c
 │       └── pwd.c
 │       └── rm.c
@@ -44,12 +50,16 @@ The project is organized as follows:
 
 - **`pwd`**: Prints the current working directory.
 - **`ls`**: Lists the files and directories in the current directory.
+  - `-l`: List in long format.
+  - `-a`: List all entries including those starting with a dot (hidden files).
+  - `-la`: List in long format including all entries.
 - **`mkdir`**: Creates a new directory.
 - **`rmdir`**: Removes an empty directory.
 - **`clear`**: Clears the terminal.
 - **`cd`**: Changes the current working directory.
 - **`rm`**: Removes a file or directory.
 - **`touch`**: Creates a new empty file or updates the timestamp of an existing file.
+- **`man`**: Displays help information for commands.
 
 ## Getting Started
 
