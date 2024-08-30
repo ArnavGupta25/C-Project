@@ -7,7 +7,7 @@
 #include <sys/types.h>
 #include <fcntl.h>
 #include <time.h>
-#include <pwd.h> 
+#include <pwd.h>
 #include <grp.h>
 
 void pwd_command();

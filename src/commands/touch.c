@@ -8,7 +8,6 @@ void touch_command(const char *filename)
         return;
     }
 
-
     int fd = open(filename, O_CREAT | O_WRONLY, 0644);
     if (fd < 0)
     {
