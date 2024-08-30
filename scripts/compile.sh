@@ -10,6 +10,7 @@ gcc -o run \
 ../src/commands/rm.c \
 ../src/commands/touch.c \
 ../src/commands/man.c \
+../src/commands/cat.c \
 -I ../include \
 -Wall
 

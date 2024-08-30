@@ -29,6 +29,7 @@ The project is organized as follows:
 │   ├── main.c                    # Main entry point of the program
 │   ├── execute_commands.c        # Contains the command execution logic
 │   └── commands/                 # Directory containing individual command implementations
+│       ├── cat.c
 │       ├── cd.c
 │       ├── clear.c
 │       ├── ls.c
@@ -60,6 +61,8 @@ The project is organized as follows:
 - **`rm`**: Removes a file or directory.
 - **`touch`**: Creates a new empty file or updates the timestamp of an existing file.
 - **`man`**: Displays help information for commands.
+- **`cat`**: Displays the contents of one or more files.
+
 
 ## Getting Started
 
