@@ -15,6 +15,7 @@ void man_command(const char *command)
         printf("  touch  - Creates a new file or updates the timestamp of an existing file\n");
         printf("  man    - Displays help information for commands\n");
         printf("  cat    - Displays the contents of one or more files.\n");
+        printf("  echo   - Displays a line of text\n");
         printf("  exit   - Exits the shell\n");
     }
     else if (strcmp(command, "pwd") == 0)
@@ -60,6 +61,11 @@ void man_command(const char *command)
     {
         printf("Concatenates and displays the contents of the specified files.\n");
         printf("Usage: cat <file1> [file2 ...]\n");
+    }
+    else if (strcmp(command, "echo") == 0)
+    {
+        printf("echo: Displays a line of text.\n");
+        printf("Usage: echo [STRING...]\n");
     }
     else
     {

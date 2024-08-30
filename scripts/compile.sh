@@ -11,6 +11,7 @@ gcc -o run \
 ../src/commands/touch.c \
 ../src/commands/man.c \
 ../src/commands/cat.c \
+../src/commands/echo.c \
 -I ../include \
 -Wall
 

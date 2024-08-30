@@ -32,6 +32,7 @@ The project is organized as follows:
 │       ├── cat.c
 │       ├── cd.c
 │       ├── clear.c
+│       ├── echo.c
 │       ├── ls.c
 │       ├── man.c
 │       ├── mkdir.c
@@ -62,6 +63,7 @@ The project is organized as follows:
 - **`touch`**: Creates a new empty file or updates the timestamp of an existing file.
 - **`man`**: Displays help information for commands.
 - **`cat`**: Displays the contents of one or more files.
+- **`echo`**: Displays a line of text.
 
 
 ## Getting Started

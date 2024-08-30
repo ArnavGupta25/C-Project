@@ -56,6 +56,10 @@ void execute_commands(char *command)
     {
         cat_command(argc, args);
     }
+    else if (strcmp(cmd, "echo") == 0)
+    {
+        echo_command(argc, args);
+    }
     else
     {
         printf("Command not recognized.\n");
