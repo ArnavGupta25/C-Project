@@ -15,7 +15,7 @@ void execute_commands(char *command)
     }
     else if (strcmp(cmd, "ls") == 0)
     {
-        ls_command();
+        ls_command(arg);
     }
     else if (strcmp(cmd, "mkdir") == 0)
     {
@@ -36,6 +36,10 @@ void execute_commands(char *command)
     else if (strcmp(cmd, "touch") == 0)
     {
         touch_command(arg);
+    }
+    else if (strcmp(cmd, "man") == 0)
+    {
+        man_command(arg);
     }
     else
     {
