@@ -16,7 +16,7 @@ void ls_command();
 void mkdir_command(char *dir_name);
 void rmdir_command(char *dir_name);
 void cd_command(const char *path);
-void rm_command(const char *filename);
+void rm_command(int argc, char *argv[]);
 void touch_command(const char *filename);
 void man_command(const char *command);
 void cat_command(int argc, char *argv[]);

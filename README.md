@@ -60,7 +60,7 @@ The project is organized as follows:
 - **`rmdir`**: Removes an empty directory.
 - **`clear`**: Clears the terminal.
 - **`cd`**: Changes the current working directory.
-- **`rm`**: Removes a file or directory.
+- **`rm`**: Removes one or multiple files or directories.
 - **`touch`**: Creates a new empty file or updates the timestamp of an existing file.
 - **`man`**: Displays help information for commands.
 - **`cat`**: Displays the contents of one or more files.

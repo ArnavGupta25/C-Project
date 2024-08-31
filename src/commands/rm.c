@@ -1,19 +1,28 @@
 #include "commands.h"
 
-void rm_command(const char *filename)
+void rm_command(int argc, char *argv[])
 {
-    if (filename == NULL || strcmp(filename, "") == 0)
+    if (argc == 0)
     {
-        fprintf(stderr, "rm: missing file name\n");
+        fprintf(stderr, "Usage: rm <file1> [file2 ...]\n");
         return;
     }
 
-    if (remove(filename) != 0)
+    for (int i = 0; i < argc; i++)
     {
-        perror("rm");
-    }
-    else
-    {
-        printf("Removed file: %s\n", filename);
+        if (argv[i] == NULL || strcmp(argv[i], "") == 0)
+        {
+            fprintf(stderr, "rm: missing file name\n");
+            continue;
+        }
+
+        if (remove(argv[i]) != 0)
+        {
+            perror("rm");
+        }
+        else
+        {
+            printf("Removed file: %s\n", argv[i]);
+        }
     }
 }

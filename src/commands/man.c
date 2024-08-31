@@ -11,7 +11,7 @@ void man_command(const char *command)
         printf("  mkdir  - Creates a new directory\n");
         printf("  rmdir  - Removes an empty directory\n");
         printf("  cd     - Changes the current directory\n");
-        printf("  rm     - Removes a file\n");
+        printf("  rm     - Removes one or more files.\n");
         printf("  touch  - Creates a new file or updates the timestamp of an existing file\n");
         printf("  man    - Displays help information for commands\n");
         printf("  cat    - Displays the contents of one or more files.\n");
@@ -50,9 +50,10 @@ void man_command(const char *command)
     }
     else if (strcmp(command, "rm") == 0)
     {
-        printf("rm: Removes a file.\n");
-        printf("Usage: rm FILE_NAME\n");
+        printf("rm: Removes one or more files.\n");
+        printf("Usage: rm FILE_NAME [FILE_NAME ...]\n");
     }
+
     else if (strcmp(command, "touch") == 0)
     {
         printf("touch: Creates a new file or updates the timestamp of an existing file.\n");

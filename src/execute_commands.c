@@ -42,8 +42,9 @@ void execute_commands(char *command)
     }
     else if (strcmp(cmd, "rm") == 0)
     {
-        rm_command(argc > 0 ? args[0] : NULL);
+        rm_command(argc, args);
     }
+
     else if (strcmp(cmd, "touch") == 0)
     {
         touch_command(argc > 0 ? args[0] : NULL);
