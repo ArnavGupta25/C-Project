@@ -60,6 +60,10 @@ void execute_commands(char *command)
     {
         echo_command(argc, args);
     }
+    else if (strcmp(cmd, "grep") == 0)
+    {
+        grep_command(argc, args);
+    }
     else
     {
         printf("Command not recognized.\n");

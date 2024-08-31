@@ -16,6 +16,7 @@ void man_command(const char *command)
         printf("  man    - Displays help information for commands\n");
         printf("  cat    - Displays the contents of one or more files.\n");
         printf("  echo   - Displays a line of text\n");
+        printf("  grep   - Searches for a pattern in files\n");
         printf("  exit   - Exits the shell\n");
     }
     else if (strcmp(command, "pwd") == 0)
@@ -66,6 +67,11 @@ void man_command(const char *command)
     {
         printf("echo: Displays a line of text.\n");
         printf("Usage: echo [STRING...]\n");
+    }
+    else if (strcmp(command, "grep") == 0)
+    {
+        printf("grep: Searches for a pattern in files.\n");
+        printf("Usage: grep PATTERN <file1> [file2 ...]\n");
     }
     else
     {

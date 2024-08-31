@@ -21,4 +21,5 @@ void touch_command(const char *filename);
 void man_command(const char *command);
 void cat_command(int argc, char *argv[]);
 void echo_command(int argc, char *argv[]);
+void grep_command(int argc, char *argv[]);
 void execute_commands(char *command);

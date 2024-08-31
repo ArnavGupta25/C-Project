@@ -33,6 +33,7 @@ The project is organized as follows:
 │       ├── cd.c
 │       ├── clear.c
 │       ├── echo.c
+│       ├── grep.c
 │       ├── ls.c
 │       ├── man.c
 │       ├── mkdir.c
@@ -64,6 +65,7 @@ The project is organized as follows:
 - **`man`**: Displays help information for commands.
 - **`cat`**: Displays the contents of one or more files.
 - **`echo`**: Displays a line of text.
+- **`grep`**: Searches for a pattern in files.
 
 
 ## Getting Started

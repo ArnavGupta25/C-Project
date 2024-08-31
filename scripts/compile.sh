@@ -12,6 +12,7 @@ gcc -o run \
 ../src/commands/man.c \
 ../src/commands/cat.c \
 ../src/commands/echo.c \
+../src/commands/grep.c \
 -I ../include \
 -Wall
 
