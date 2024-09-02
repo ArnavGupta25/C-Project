@@ -13,6 +13,8 @@ gcc -o run \
 ../src/commands/cat.c \
 ../src/commands/echo.c \
 ../src/commands/grep.c \
+../src/commands/cp.c \
+../src/commands/mv.c \
 -I ../include \
 -Wall
 

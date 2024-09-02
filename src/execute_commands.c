@@ -65,6 +65,14 @@ void execute_commands(char *command)
     {
         grep_command(argc, args);
     }
+    else if (strcmp(cmd, "cp") == 0)
+    {
+        cp_command(argc, args);
+    }
+    else if (strcmp(cmd, "mv") == 0)
+    {
+        mv_command(argc, args);
+    }
     else
     {
         printf("Command not recognized.\n");

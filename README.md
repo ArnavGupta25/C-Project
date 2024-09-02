@@ -32,11 +32,13 @@ The project is organized as follows:
 │       ├── cat.c
 │       ├── cd.c
 │       ├── clear.c
+│       ├── cp.c
 │       ├── echo.c
 │       ├── grep.c
 │       ├── ls.c
 │       ├── man.c
 │       ├── mkdir.c
+│       ├── mv.c
 │       └── pwd.c
 │       └── rm.c
 │       └── rmdir.c
@@ -66,6 +68,8 @@ The project is organized as follows:
 - **`cat`**: Displays the contents of one or more files.
 - **`echo`**: Displays a line of text.
 - **`grep`**: Searches for a pattern in files.
+- **`cp`**: Copies a file from source to destination.
+- **`mv`**: Moves or renames a file.
 
 
 ## Getting Started
