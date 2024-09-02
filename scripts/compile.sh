@@ -15,6 +15,7 @@ gcc -o run \
 ../src/commands/grep.c \
 ../src/commands/cp.c \
 ../src/commands/mv.c \
+../src/commands/chmod.c \
 -I ../include \
 -Wall
 

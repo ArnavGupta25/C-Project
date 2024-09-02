@@ -20,6 +20,7 @@ void man_command(const char *command)
         printf("  grep   - Searches for a pattern in files\n");
         printf("  cp     - Copies a file from source to destination.\n");
         printf("  mv     - Moves or renames a file.\n");
+        printf("  chmod  - Changes the permissions of files.\n");
         printf("  exit   - Exits the shell\n");
     }
     else if (strcmp(command, "pwd") == 0)
@@ -98,6 +99,13 @@ void man_command(const char *command)
         printf("mv: Moves or renames a file.\n");
         printf("Usage: mv <source_file> <destination_file>\n");
     }
+    else if (strcmp(command, "chmod") == 0)
+    {
+        printf("chmod: Changes the permissions of files.\n");
+        printf("Usage: chmod <permissions> <file1> [file2 ...]\n");
+        printf("Permissions can be specified in octal (e.g., 755) or symbolic (e.g., u+x, go-w).\n");
+    }
+
     else
     {
         printf("No manual entry for %s\n", command);

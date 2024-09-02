@@ -73,6 +73,10 @@ void execute_commands(char *command)
     {
         mv_command(argc, args);
     }
+    else if (strcmp(cmd, "chmod") == 0)
+    {
+        chmod_command(argc, args);
+    }
     else
     {
         printf("Command not recognized.\n");

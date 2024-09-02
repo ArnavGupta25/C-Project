@@ -31,6 +31,7 @@ The project is organized as follows:
 │   └── commands/                 # Directory containing individual command implementations
 │       ├── cat.c
 │       ├── cd.c
+│       ├── chmod.c
 │       ├── clear.c
 │       ├── cp.c
 │       ├── echo.c
@@ -70,6 +71,7 @@ The project is organized as follows:
 - **`grep`**: Searches for a pattern in files.
 - **`cp`**: Copies a file from source to destination.
 - **`mv`**: Moves or renames a file.
+- **`chmod`**:  Changes the permissions of files.
 
 
 ## Getting Started
