@@ -24,7 +24,7 @@ This project is a reimplementation of various common shell commands in C, specif
 The project is organized as follows:
 
 ```
-/your_project_directory
+/Unix-Commands-in-C
 ├── src/
 │   ├── main.c                    # Main entry point of the program
 │   ├── execute_commands.c        # Contains the command execution logic
