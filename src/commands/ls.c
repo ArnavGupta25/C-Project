@@ -32,8 +32,16 @@ void print_file_info(const char *name)
 
     // Print modified time
     char timeBuf[80];
-    strftime(timeBuf, sizeof(timeBuf), "%b %d %H:%M", localtime(&fileStat.st_mtime));
-    printf(" %s", timeBuf);
+    struct tm *timeinfo = localtime(&fileStat.st_mtime);
+    if (timeinfo == NULL)
+    {
+        perror("localtime");
+    }
+    else
+    {
+        strftime(timeBuf, sizeof(timeBuf), "%b %d %H:%M", timeinfo);
+        printf(" %s", timeBuf);
+    }
 
     // Print file name
     printf(" %s\n", name);

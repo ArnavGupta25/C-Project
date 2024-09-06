@@ -4,78 +4,57 @@
 mode_t symbolic_to_mode(const char *symbolic, mode_t current_mode)
 {
     mode_t mode = current_mode;
+    const char *ptr = symbolic;
 
-    // Initialize masks for removals and additions
-    mode_t remove_mask = 0;
-    mode_t add_mask = 0;
+    while (*ptr) {
+        // Determine which users we're changing
+        mode_t who_mask = 0;
+        while (*ptr && *ptr != '+' && *ptr != '-' && *ptr != '=') {
+            switch (*ptr) {
+                case 'u': who_mask |= S_IRWXU; break;
+                case 'g': who_mask |= S_IRWXG; break;
+                case 'o': who_mask |= S_IRWXO; break;
+                case 'a': who_mask |= S_IRWXU | S_IRWXG | S_IRWXO; break;
+            }
+            ptr++;
+        }
 
-    // Handle removals ('-')
-    if (strstr(symbolic, "u-"))
-    {
-        if (strchr(symbolic, 'r'))
-            remove_mask |= S_IRUSR; // Mask for read removal
-        if (strchr(symbolic, 'w'))
-            remove_mask |= S_IWUSR; // Mask for write removal
-        if (strchr(symbolic, 'x'))
-            remove_mask |= S_IXUSR; // Mask for execute removal
+        if (who_mask == 0) {
+            who_mask = S_IRWXU | S_IRWXG | S_IRWXO;  // Default to all if not specified
+        }
+
+        // Determine the operation
+        char op = *ptr++;
+        
+        // Apply the changes
+        mode_t change_mask = 0;
+        while (*ptr && *ptr != ',') {
+            switch (*ptr) {
+                case 'r':
+                    change_mask |= (S_IRUSR | S_IRGRP | S_IROTH) & who_mask;
+                    break;
+                case 'w':
+                    change_mask |= (S_IWUSR | S_IWGRP | S_IWOTH) & who_mask;
+                    break;
+                case 'x':
+                    change_mask |= (S_IXUSR | S_IXGRP | S_IXOTH) & who_mask;
+                    break;
+            }
+            ptr++;
+        }
+
+        switch (op) {
+            case '+': mode |= change_mask; break;
+            case '-': mode &= ~change_mask; break;
+            case '=': 
+                mode &= ~who_mask;  // Clear all bits for specified users
+                mode |= change_mask; // Set the specified bits
+                break;
+        }
+
+        // Move to the next change group if there is one
+        if (*ptr == ',') ptr++;
     }
-
-    if (strstr(symbolic, "g-"))
-    {
-        if (strchr(symbolic, 'r'))
-            remove_mask |= S_IRGRP; // Mask for read removal
-        if (strchr(symbolic, 'w'))
-            remove_mask |= S_IWGRP; // Mask for write removal
-        if (strchr(symbolic, 'x'))
-            remove_mask |= S_IXGRP; // Mask for execute removal
-    }
-
-    if (strstr(symbolic, "o-"))
-    {
-        if (strchr(symbolic, 'r'))
-            remove_mask |= S_IROTH; // Mask for read removal
-        if (strchr(symbolic, 'w'))
-            remove_mask |= S_IWOTH; // Mask for write removal
-        if (strchr(symbolic, 'x'))
-            remove_mask |= S_IXOTH; // Mask for execute removal
-    }
-
-    // Apply removals
-    mode &= ~remove_mask;
-
-    // Handle additions ('+')
-    if (strstr(symbolic, "u+"))
-    {
-        if (strchr(symbolic, 'r'))
-            add_mask |= S_IRUSR; // Mask for read addition
-        if (strchr(symbolic, 'w'))
-            add_mask |= S_IWUSR; // Mask for write addition
-        if (strchr(symbolic, 'x'))
-            add_mask |= S_IXUSR; // Mask for execute addition
-    }
-
-    if (strstr(symbolic, "g+"))
-    {
-        if (strchr(symbolic, 'r'))
-            add_mask |= S_IRGRP; // Mask for read addition
-        if (strchr(symbolic, 'w'))
-            add_mask |= S_IWGRP; // Mask for write addition
-        if (strchr(symbolic, 'x'))
-            add_mask |= S_IXGRP; // Mask for execute addition
-    }
-
-    if (strstr(symbolic, "o+"))
-    {
-        if (strchr(symbolic, 'r'))
-            add_mask |= S_IROTH; // Mask for read addition
-        if (strchr(symbolic, 'w'))
-            add_mask |= S_IWOTH; // Mask for write addition
-        if (strchr(symbolic, 'x'))
-            add_mask |= S_IXOTH; // Mask for execute addition
-    }
-
-    // Apply additions
-    mode |= add_mask;
 
     return mode;
 }
