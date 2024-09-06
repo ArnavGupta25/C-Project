@@ -49,6 +49,13 @@ The project is organized as follows:
 │   └── commands.h                # Header file with command declarations
 ├── scripts/
 │   └── compile.sh                # Script to compile the project
+├── test/                         # Folder containing some test files for running the commands
+│   └── dir1                      #Directory for checking running of rmdir,cd 
+│   └── .hidden_file.txt          #For checking running of ls -a                
+│   └── file1.txt                 #For checking running of rm,mv,cat,cp
+│   └── file2.txt                 #For checking running of rm,mv,cat,cp
+│   └── grep1.txt                 #For checking running of grep
+│   └── grep2.txt                 #For checking running of grep             
 ├── .gitignore                    # Specifies files and directories to be ignored by Git
 └── README.md                     # This README file
 ```

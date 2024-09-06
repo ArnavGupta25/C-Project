@@ -1,0 +1,2 @@
+This is file2.
+It has different content.
