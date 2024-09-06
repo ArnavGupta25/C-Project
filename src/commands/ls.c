@@ -58,19 +58,22 @@ void ls_command(const char *option)
         return;
     }
 
-    int show_all = 0;
-    int long_format = 0;
+    int show_all = 0; //flag for -a
+    int long_format = 0; //flag for -l
 
     if (option != NULL)
     {
+        // ls -a
         if (strcmp(option, "-a") == 0)
         {
             show_all = 1;
         }
+        // ls -l
         else if (strcmp(option, "-l") == 0)
         {
             long_format = 1;
         }
+        // ls -la or ls -al
         else if (strcmp(option, "-la") == 0 || strcmp(option, "-al") == 0)
         {
             show_all = 1;
@@ -100,6 +103,7 @@ void ls_command(const char *option)
             printf("%s  ", dir->d_name);
         }
     }
+
     if (!long_format)
     {
         printf("\n");

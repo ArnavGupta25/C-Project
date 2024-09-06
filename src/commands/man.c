@@ -24,6 +24,7 @@ void man_command(const char *command)
         printf("  date   - Displays the current date and time.\n");
         printf("  exit   - Exits the shell\n");
     }
+    // for specific commands manual
     else if (strcmp(command, "pwd") == 0)
     {
         printf("pwd: Prints the current working directory.\n");

@@ -2,14 +2,17 @@
 
 void execute_commands(char *command)
 {
-    char *cmd = strtok(command, " ");
-    char *arg = strtok(NULL, " ");
+    char *cmd = strtok(command, " "); // Get the command (first token)
+    char *arg = strtok(NULL, " ");    // Get the first argument (subsequent tokens)
 
+    // Array to hold command-line arguments
     char *args[100];
     int argc = 0;
+
+    // Loop to tokenize and store all arguments
     while (arg != NULL)
     {
-        args[argc++] = arg;
+        args[argc++] = arg; // Add argument to array
         arg = strtok(NULL, " ");
     }
 
