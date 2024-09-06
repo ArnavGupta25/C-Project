@@ -77,6 +77,10 @@ void execute_commands(char *command)
     {
         chmod_command(argc, args);
     }
+    else if (strcmp(cmd, "date") == 0)
+    {
+        date_command();
+    }
     else
     {
         printf("Command not recognized.\n");

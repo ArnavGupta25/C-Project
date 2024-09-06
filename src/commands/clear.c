@@ -2,5 +2,6 @@
 
 void clear_command()
 {
+    // Clear the console
     system("clear");
 }

@@ -34,6 +34,7 @@ The project is organized as follows:
 │       ├── chmod.c
 │       ├── clear.c
 │       ├── cp.c
+│       ├── date.c
 │       ├── echo.c
 │       ├── grep.c
 │       ├── ls.c
@@ -72,6 +73,7 @@ The project is organized as follows:
 - **`cp`**: Copies a file from source to destination.
 - **`mv`**: Moves or renames a file.
 - **`chmod`**:  Changes the permissions of files.
+- **`date`**:  Displays the current date and time.
 
 
 ## Getting Started

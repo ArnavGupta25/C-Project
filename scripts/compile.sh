@@ -16,6 +16,7 @@ gcc -o run \
 ../src/commands/cp.c \
 ../src/commands/mv.c \
 ../src/commands/chmod.c \
+../src/commands/date.c \
 -I ../include \
 -Wall
 

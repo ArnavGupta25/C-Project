@@ -25,4 +25,5 @@ void grep_command(int argc, char *argv[]);
 void cp_command(int argc, char *argv[]);
 void mv_command(int argc, char *argv[]);
 void chmod_command(int argc, char *argv[]);
+void date_command(void);
 void execute_commands(char *command);
